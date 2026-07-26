@@ -11,6 +11,10 @@ Repository:
 
 `https://github.com/kensinro/MOATTERS`
 
+Archived release:
+
+[10.5281/zenodo.21596406](https://doi.org/10.5281/zenodo.21596406)
+
 Current public version:
 
 `v1.0.0`
@@ -380,7 +384,7 @@ The locked-output archive contains:
 
 Large source matrices, intermediate expression matrices, and large regenerable serialized objects are excluded by design.
 
-The Zenodo DOI will be added here after the first public release has been archived.
+Archived release: [10.5281/zenodo.21596406](https://doi.org/10.5281/zenodo.21596406)
 
 ---
 
@@ -455,11 +459,15 @@ Citation metadata are provided in:
 
 `CITATION.cff`
 
-The repository should be cited together with the archived Zenodo release after the DOI becomes available.
+The repository should be cited together with the archived Zenodo release.
 
 Repository:
 
 `https://github.com/kensinro/MOATTERS`
+
+Archived release:
+
+[10.5281/zenodo.21596406](https://doi.org/10.5281/zenodo.21596406)
 
 ---
 
