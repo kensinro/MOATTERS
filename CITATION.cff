@@ -14,6 +14,11 @@ url: "https://github.com/kensinro/MOATTERS"
 version: "1.0.0"
 date-released: "2026-07-26"
 
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21596406"
+    description: "Archived software release on Zenodo"
+
 description: >-
   Version-locked and rerun-validated reproducibility code for modular,
   observable, auditable, and traceable task-conditioned evidence
