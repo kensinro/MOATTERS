@@ -19,7 +19,7 @@ This release candidate incorporates defects observed during the 2026-07-26 clean
 ## Non-blocking improvements
 
 - Benchmark numeric conversion is assembled in one block to avoid DataFrame fragmentation warnings.
-- The package version is `1.0.0rc4`; supported Python is explicitly constrained to 3.10–3.13.
+- The package version is `1.0.0`; supported Python is explicitly constrained to 3.10–3.13.
 
 ## Rerun results observed before release locking
 
