@@ -1,73 +1,69 @@
 # MOATTERS reproducibility code
 
-**MOATTERS** denotes **Modularity, Observability, Auditability, and Traceability for Task-conditioned Evidence Reconstruction into Patient States**. This repository contains the locked analysis scripts supporting the associated manuscript.
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/kensinro/MOATTERS)
+[![Reproducibility](https://img.shields.io/badge/REP1.0-rerun--validated-success)](https://github.com/kensinro/MOATTERS)
+
+**MOATTERS** denotes **Modularity, Observability, Auditability, and Traceability for Task-conditioned Evidence Reconstruction into Patient States**.
+
+This repository contains the version-locked and rerun-validated analysis code supporting the associated biomedical-informatics study. The implementation reconstructs patient-level molecular-functional states from task-discriminative biological-process observables while preserving modularity, traceability, explicit audit boundaries, and reproducible execution.
+
+Repository:
+
+`https://github.com/kensinro/MOATTERS`
+
+Current public version:
+
+`v1.0.0`
+
+---
 
 ## Scientific scope
 
-The repository preserves eight evidence blocks: TCGA-BRCA derivation/reference, independent reconstruction in METABRIC and GSE96058/SCAN-B, de novo workflow applicability in TCGA-KIRC and TCGA-LUAD, evidence synthesis, singleton-component audit, and a matched GSVA/Pathifier benchmark. KIRC and LUAD are cross-cancer applicability demonstrations, not external validation of BRCA modules.
+The repository preserves the following evidence blocks:
 
-## Portable configuration
+1. TCGA-BRCA derivation and standardized reference audit;
+2. independent breast-cancer reconstruction and external validation in METABRIC;
+3. independent breast-cancer reconstruction and external validation in GSE96058/SCAN-B;
+4. de novo cross-cancer workflow applicability in TCGA-KIRC;
+5. de novo cross-cancer workflow applicability in TCGA-LUAD;
+6. three-cohort and joint evidence synthesis;
+7. singleton-component audit;
+8. matched GSVA and Pathifier benchmarking.
 
-All active scripts now resolve paths through `moatters/config.py`. Configure paths by either:
+METABRIC and GSE96058/SCAN-B are independent breast-cancer external-validation cohorts.
 
-1. copying `config/moatters_config.example.json` to `config/moatters_config.json`; or
-2. setting `MOATTERS_DATA_ROOT`, `MOATTERS_OUTPUT_ROOT`, `MOATTERS_RSCRIPT`, and optionally `MOATTERS_CONFIG`.
+TCGA-KIRC and TCGA-LUAD are cross-cancer applicability demonstrations. They do not constitute external validation of the BRCA-derived modules and should not be described as such.
 
-No active script requires editing a hard-coded drive path.
-
-## Installation
-
-```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# Linux/macOS: source .venv/bin/activate
-pip install -r requirements.txt
-pip install -e .
-python tools/preflight.py --scope full
-```
-
-The benchmark additionally requires R/Bioconductor with GSVA and Pathifier. Use `--scope structure`, `core`, `benchmark`, or `full` to distinguish repository/runtime readiness from data and R-benchmark readiness.
-
-## Running
-
-Inspect commands without execution:
-
-```bash
-python run_pipeline.py all --dry-run
-```
-
-Run one evidence block:
-
-```bash
-python run_pipeline.py metabric
-python run_pipeline.py gse96058
-python run_pipeline.py kirc
-python run_pipeline.py luad
-python run_pipeline.py singleton
-python run_pipeline.py benchmark
-```
-
-See `RUN_ORDER.md` and `docs/DATA_AND_INPUTS.md`. Individual scripts remain executable after `pip install -e .`.
-
-## Locked primary settings
-
-- minimum matched genes: `K >= 10`;
-- nominal task-discriminability: `D = -log10(p) >= 1.301`;
-- primary network threshold: `|r| >= 0.35`;
-- repeated cross-validation: 20 x 5 where specified;
-- label permutations: 500 where specified.
-
-These thresholds are audited through the associated sensitivity analyses and must not be interpreted as multiple-testing-adjusted biological discoveries.
-
-## Provenance
-
-`archive/superseded/` retains earlier working variants for historical provenance only. It is excluded from the recommended execution path and should normally be omitted from a compact Zenodo software release unless provenance retention is desired.
+---
 
 ## Release status
 
-This is a release candidate. The portable configuration and tiered preflight have been audited in REP1.0, but numerical reproducibility remains to be demonstrated by rerunning the required stages against the locked inputs. Before public deposition, complete the license choice, repository URL, Zenodo DOI, and final code-to-result hash lock described in `docs/RELEASE_CHECKLIST.md`.
+Version `1.0.0` is the first public, rerun-validated release of the MOATTERS reproducibility workflow.
 
+The principal workflow was rerun from configured cohort inputs through:
 
-## REP1 rerun repair level
+- TCGA-BRCA derivation;
+- TCGA-BRCA standardized endpoint audit;
+- METABRIC external reconstruction and validation;
+- GSE96058/SCAN-B external reconstruction and validation;
+- TCGA-KIRC cross-cancer analysis;
+- TCGA-LUAD cross-cancer analysis;
+- three-cohort evidence synthesis;
+- joint evidence synthesis;
+- singleton-component audit;
+- GSVA and Pathifier benchmarking.
 
-This archive is release candidate `1.0.0rc4`. It incorporates the clean-rerun repairs listed in `docs/REP1_0_RERUN_FIXES.md`.
+The rerun confirmed the principal cohort denominators and workflow outputs:
+
+| Cohort | Locked analysis denominator |
+|---|---:|
+| TCGA-BRCA | 1,073 matched patients |
+| METABRIC | 1,980 patients |
+| GSE96058/SCAN-B | 3,069 patients |
+| TCGA-KIRC | 533 primary-tumour patients |
+| TCGA-LUAD | 515 primary-tumour patients |
+
+The code release incorporates the portability, compatibility, and dependency repairs identified during REP1.0. These repairs are documented in:
+
+```text
+docs/REP1_0_RERUN_FIXES.md
