@@ -1,6 +1,6 @@
 # MOATTERS REP1.0 rerun repairs
 
-This release candidate incorporates defects observed during the 2026-07-26 clean rerun.
+This release incorporates defects observed during the 2026-07-26 clean rerun.
 
 ## Blocking defects repaired
 
