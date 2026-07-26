@@ -1,0 +1,30 @@
+{
+  "title": "MOATTERS reproducibility code",
+  "description": "Version-locked and rerun-validated reproducibility code for modular, observable, auditable, and traceable task-conditioned evidence reconstruction into patient-level molecular-functional states. The release includes TCGA-BRCA derivation and reference audit, independent external validation in METABRIC and GSE96058/SCAN-B, cross-cancer applicability analyses in TCGA-KIRC and TCGA-LUAD, evidence synthesis, singleton-component audit, and matched GSVA/Pathifier benchmarking.",
+  "creators": [
+    {
+      "name": "Kong, Sin-Guan"
+    }
+  ],
+  "license": {
+    "id": "MIT"
+  },
+  "version": "1.0.0",
+  "upload_type": "software",
+  "keywords": [
+    "biomedical informatics",
+    "reproducibility",
+    "patient-state reconstruction",
+    "transcriptomics",
+    "breast cancer",
+    "external validation",
+    "cross-cancer applicability"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/kensinro/MOATTERS",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
