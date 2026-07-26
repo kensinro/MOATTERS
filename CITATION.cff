@@ -1,15 +1,31 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the associated article and archived software release."
+
 title: "MOATTERS reproducibility code"
 type: software
+
 authors:
-  - family-names: Kong
-    given-names: Sin Guan
-repository-code: "https://github.com/REPLACE_WITH_FINAL_REPOSITORY"
+  - family-names: "Kong"
+    given-names: "Sin-Guan"
+
+repository-code: "https://github.com/kensinro/MOATTERS"
+url: "https://github.com/kensinro/MOATTERS"
+
 version: "1.0.0"
-date-released: "2026-07-25"
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.REPLACE_WITH_FINAL_DOI"
-    description: "Archived software release"
-license: "REPLACE_WITH_SELECTED_LICENSE"
+date-released: "2026-07-26"
+
+description: >-
+  Version-locked and rerun-validated reproducibility code for modular,
+  observable, auditable, and traceable task-conditioned evidence
+  reconstruction into patient-level molecular-functional states.
+
+keywords:
+  - biomedical informatics
+  - reproducibility
+  - patient-state reconstruction
+  - transcriptomics
+  - breast cancer
+  - external validation
+  - cross-cancer applicability
+
+license: "MIT"
